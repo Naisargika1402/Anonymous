@@ -4,7 +4,7 @@
 2. Useful extension: Rest client (for api testing)
 3. User roles: Customer/Service Provider/Admin
 
-# Major feautres or functionalities:
+# Major features or functionalities:
 1. Services and convenience website
 2. All types of basic services like: plumbing, repairment, makeup, house help services, packers and movers, etc.
 3. Food/Tiffin services on weekly/monthly basis and maid services on monthy basis.
