@@ -38,4 +38,5 @@
 4. No of our users n employees(the one where no increases animation)
 5. Why choose us (homepage)
 6. Testimonials (different page: navbar link)
-7. Contact us/footer (different page: navbar link)
+7. Contact us (different page: navbar link)
+8. Footer
