@@ -39,4 +39,5 @@
 5. Why choose us (homepage)
 6. Testimonials (different page: navbar link)
 7. Contact us (different page: navbar link)
-8. Footer
+8. Login/SignUp button (clicking on it will open a dialog box)
+9. Footer
