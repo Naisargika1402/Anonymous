@@ -1,7 +1,8 @@
 import React from "react";
+import "./HeroSection.css";
 
 function HeroSection() {
-  return <div></div>;
+  return <div className="hero"></div>;
 }
 
 export default HeroSection;
