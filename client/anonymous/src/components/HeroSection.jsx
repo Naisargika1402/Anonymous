@@ -1,5 +1,5 @@
 import React from "react";
-import "./HeroSection.css";
+import "../css files/HeroSection.css";
 
 function HeroSection() {
   return <div className="hero"></div>;
