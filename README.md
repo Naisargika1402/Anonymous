@@ -20,3 +20,10 @@
 <a href="https://github.com/Naisargika1402/" style="text-decoration: none;">`Naisargika Subudhi`</a> <br/>
 <a href="https://github.com/rks-031/" style="text-decoration: none;">`Rajnish Kumar Singh`</a> <br/>
 
+# Working with the project:
+1. Fork and clone the repository.
+2. Install the required npm packages (using npm i <package_name>) [ P.S : your terminal will automatically generate an error in absence of a required dependency]
+3. Commit your changes: `git commit -m "Add some feature"`
+4. Push to the branch: `git push origin my-feature`
+5. Open a pull request. [ P.S : Resolve all the merge conflicts before making a PR]
+
