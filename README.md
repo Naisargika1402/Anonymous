@@ -27,3 +27,12 @@
 4. Push to the branch: `git push origin my-feature`
 5. Open a pull request. [ P.S : Resolve all the merge conflicts before making a PR]
 
+# Homepage components:
+1.Navbar + Herosection 
+2.About Us
+3.Our services
+4.No of our users n employeers(the one where no increases animation)
+5.Why choose us
+6.Testimonials
+7.Contact us/footer
+
