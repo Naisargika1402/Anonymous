@@ -33,9 +33,9 @@
 # Homepage components:
 
 1. Navbar + Herosection
-2. About Us
-3. Our services
-4. No of our users n employeers(the one where no increases animation)
-5. Why choose us
-6. Testimonials
-7. Contact us/footer
+2. About Us (different page: navbar link)
+3. Our services (different page)
+4. No of our users n employees(the one where no increases animation)
+5. Why choose us (homepage)
+6. Testimonials (different page: navbar link)
+7. Contact us/footer (different page: navbar link)
