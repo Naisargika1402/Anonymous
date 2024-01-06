@@ -3,9 +3,10 @@
     margin: 0;
     color: #000000;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: bold;
-}
+    font-style: Quattrocento Sans;
+} 
 
 .custom_nav-container .navbar-toggler {
     outline: none;
@@ -110,8 +111,9 @@
 
 .nav-item{
     padding:0.5rem 1.5rem;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
+    font-style: Quattrocento Sans;
 }
 
 .navbar-toggler:focus,
