@@ -1,14 +1,23 @@
 import HomePage from "./pages/HomePage";
 import Container from "./styles/Container";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import About from "./pages/About";
+import Services from "./pages/Services";
+import Login from "./pages/Login";
+import SignUp from "./pages/SignUp";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <Container>
-      <Header />
-      <HomePage />
-      <Footer />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<SignUp />} />
+        </Routes>
+      </BrowserRouter>
     </Container>
   );
 }

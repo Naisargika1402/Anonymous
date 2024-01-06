@@ -5,7 +5,7 @@ function Header() {
   return (
     <nav class="navbar navbar-expand-lg custom_nav-container mynav">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="/">
           Anonymous
         </a>
         <button
@@ -21,14 +21,27 @@ function Header() {
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
-            <li class="nav-item">Services</li>
-            <li class="nav-item">About Us</li>
-            <li class="nav-item">Contact Us</li>
+            <li class="nav-item">
+              <a className="nav-link text-black" href="/services">
+                Services
+              </a>
+            </li>
+            <li class="nav-item">
+              <a className="nav-link text-black" href="/about">
+                About Us
+              </a>
+            </li>
             <button
               type="button"
-              class="nav-item signup btn btn-outline-primary"
+              className="nav-item signup btn btn-outline-primary"
+              style={{ color: "black", border: "1px solid blue" }}
             >
-              Sign Up
+              <a
+                href="/login"
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                Login
+              </a>
             </button>
           </ul>
         </div>

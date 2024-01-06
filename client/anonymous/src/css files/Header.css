@@ -136,7 +136,15 @@
     margin:auto;
 }
 
+.signup:hover{
+  max-width: fit-content;
+  margin:auto;
+  color: white;
+}
+
 .navbar-collapse{
     transition: all .3s;
 }
+
+
 
