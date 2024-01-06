@@ -33,7 +33,7 @@ function Header() {
             </li>
             <button
               type="button"
-              className="nav-item signup btn btn-outline-primary"
+              className="nav-item signup btn btn-outline-primary mx-2"
               style={{ color: "black", border: "1px solid blue" }}
             >
               <a
@@ -41,6 +41,18 @@ function Header() {
                 style={{ textDecoration: "none", color: "inherit" }}
               >
                 Login
+              </a>
+            </button>
+            <button
+              type="button"
+              className="nav-item signup btn btn-outline-primary"
+              style={{ color: "black", border: "1px solid blue" }}
+            >
+              <a
+                href="/signup"
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                Sign Up
               </a>
             </button>
           </ul>

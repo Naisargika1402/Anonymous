@@ -26,13 +26,13 @@ const Login = () => {
           </button>
 
           {/* Provide the actual component in the to prop */}
-          <Link to={SignUp} className="signup-message">
+          {/*<Link to={SignUp} className="signup-message">
             Not already a user? Sign up here
-          </Link>
+  </Link>*/}
 
-          {/*<a href="signup.html" className="signup-message">
+          <a href="signUp.jsx" className="signup-message">
             Not already a user? Sign up here
-          </a>*/}
+          </a>
         </form>
       </div>
     </div>
