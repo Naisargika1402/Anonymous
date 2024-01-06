@@ -1,6 +1,6 @@
 import React from "react";
 import Lottie from "react-lottie";
-import contactAnimation from "../json files/contact-us.json"; // Adjust the path accordingly
+import contactAnimation from "../json files/contact-us.json";
 import "../css files/ContactUs.css";
 
 function ContactUs() {
