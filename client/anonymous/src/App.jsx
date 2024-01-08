@@ -5,6 +5,7 @@ import Services from "./pages/Services";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import "../dotenv";
 
 function App() {
   return (
