@@ -1,6 +1,6 @@
 import React from "react";
 import Lottie from "react-lottie";
-import emailjs from "emailjs-com"; // Import emailjs library
+import emailjs from "emailjs-com";
 import contactAnimation from "../json files/contact-us.json";
 import "../css files/ContactUs.css";
 
@@ -27,16 +27,13 @@ function ContactUs() {
       .then(
         (result) => {
           console.log(result.text);
-          // You can add any success handling logic here
         },
         (error) => {
           console.log(error.text);
-          // You can add any error handling logic here
         }
       );
 
-    // Clear the form fields after submission if needed
-    e.target.reset();
+    e.target.reset(); //clear form field after submission
   };
 
   return (
