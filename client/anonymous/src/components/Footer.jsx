@@ -16,32 +16,35 @@ function Footer() {
               <div class="info_items">
                 <div class="row">
                   <div class="col-md-4">
-                    <a href="https://www.free-css.com/free-css-templates">
+                    <a
+                      href="https://www.google.com/maps/d/embed?mid=1ZF_HaIV912sdf18IlfHNP82U9CM&hl=en_US&ehbc=2E312F"
+                      target="_blank"
+                    >
                       <div class="item">
                         <div class="img-box">
                           <CiLocationOn></CiLocationOn>
                         </div>
-                        <p>Lorem Ipsum is simply dummy text</p>
+                        <p>Reach Us</p>
                       </div>
                     </a>
                   </div>
                   <div class="col-md-4">
-                    <a href="https://www.free-css.com/free-css-templates">
+                    <a href="tel:+91-8210788702">
                       <div class="item">
                         <div class="img-box">
                           <BsFillTelephoneFill></BsFillTelephoneFill>
                         </div>
-                        <p>+02 1234567890</p>
+                        <p>Call Us</p>
                       </div>
                     </a>
                   </div>
                   <div class="col-md-4">
-                    <a href="https://www.free-css.com/free-css-templates">
+                    <a href="mailto:b421037@iiit-bh.ac.in">
                       <div class="item">
                         <div class="img-box">
                           <MdEmail></MdEmail>
                         </div>
-                        <p>mail@domain.com</p>
+                        <p>Mail Us</p>
                       </div>
                     </a>
                   </div>
