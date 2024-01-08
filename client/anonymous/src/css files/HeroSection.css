@@ -1,19 +1,25 @@
+/* HeroSection.css */
+@import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap');
+
 .hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  
-  .animation-container {
-    display: flex;
-  }
-  
-  .animation-container > div {
-    margin: 10px; /* Adjust the margin as needed */
-  }
-  
-  .text-container {
-    margin-top: 20px; /* Adjust the margin as needed */
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.animation-container {
+  display: flex;
+}
+
+.animation-container > div {
+  margin: 10px; 
+}
+
+.text-container {
+  margin-top: 20px;
+  color: #146aca;
+  font-size: 37px;
+  font-family: 'Salsa', cursive, sans-serif;
+
+}

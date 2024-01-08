@@ -29,7 +29,6 @@ function HeroSection() {
         <Lottie options={animationOptions1} style={{ marginTop: "80px" }} />
         <Lottie options={animationOptions2} />
       </div>
-      <br />
       <div className="text-container">
         <p>Anonymous - Your Virtual Concierge</p>
       </div>
