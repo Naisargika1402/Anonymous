@@ -68,8 +68,8 @@ function Footer() {
       <footer class="footer_section">
         <div class="container">
           <p>
-            © <span id="displayDateYear">Copyright 2024 </span>| Anonymous | All
-            Rights Reserved.
+            <span id="displayDateYear">Copyright &copy; 2024 </span>| Anonymous
+            | All Rights Reserved
           </p>
         </div>
       </footer>
