@@ -31,6 +31,11 @@ function Header() {
                 About Us
               </a>
             </li>
+            <li class="nav-item">
+              <a className="nav-link text-black" href="/testimonials">
+                Testimonials
+              </a>
+            </li>
             <button
               type="button"
               className="nav-item signup btn btn-outline-primary mx-2"
