@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import FeedbackForm from "../components/FeedbackForm";
@@ -10,6 +10,19 @@ function Testimonials() {
     // Update your feedback list, or send it to a backend (if needed)
     setFeedbackList((prevFeedback) => [...prevFeedback, { feedback, rating }]);
   };
+
+  useEffect(() => {
+    const fetchFeedback = async () => {
+      try {
+        const response = await axios.get("http://localhost:4000/api/feedbacks");
+        setFeedbackList(response.data);
+      } catch (error) {
+        console.error("Error fetching feedback:", error);
+      }
+    };
+
+    fetchFeedback();
+  }, []);
 
   return (
     <div>

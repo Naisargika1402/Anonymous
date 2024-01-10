@@ -1,17 +1,31 @@
-// FeedbackForm.js
-
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ReactStars from "react-stars";
+import axios from "axios";
 
 const FeedbackForm = ({ onSubmit }) => {
   const [feedback, setFeedback] = useState("");
   const [rating, setRating] = useState(0);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    onSubmit({ feedback, rating });
-    setFeedback(""); // Clear the input after submission
-    setRating(0); // Reset the rating
+
+    try {
+      // Make a POST request to submit feedback
+      await axios.post("http://localhost:4000/api/feedback", {
+        feedback,
+        rating,
+      });
+
+      // If the request is successful, clear the inputs and reset the rating
+      setFeedback("");
+      setRating(0);
+
+      // Call the onSubmit prop with the feedback data
+      onSubmit({ feedback, rating });
+    } catch (error) {
+      console.error("Error submitting feedback:", error);
+      // Handle error if needed
+    }
   };
 
   return (
