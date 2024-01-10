@@ -27,13 +27,13 @@ function Header() {
               </a>
             </li>
             <li class="nav-item">
-              <a className="nav-link text-black" href="/about">
-                About Us
+              <a className="nav-link text-black" href="/testimonials">
+                Testimonials
               </a>
             </li>
             <li class="nav-item">
-              <a className="nav-link text-black" href="/testimonials">
-                Testimonials
+              <a className="nav-link text-black" href="/about">
+                About Us
               </a>
             </li>
             <button
