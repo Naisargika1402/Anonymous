@@ -63,7 +63,8 @@ function About() {
           informed about upcoming appointments, making your experience with
           Anonymous organized and stress-free.
         </div>
-        <div className="my-3">
+        <br />
+        <div className="mb-5">
           Anonymous - Your Virtual Concierge, is more than just a service
           platform; it's a commitment to making your life easier, more
           efficient, and more enjoyable. Join us on this journey towards
