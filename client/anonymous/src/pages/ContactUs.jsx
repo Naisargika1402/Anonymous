@@ -37,7 +37,7 @@ function ContactUs() {
   };
 
   return (
-    <div className="container-fluid">
+    <div className="container-fluid container">
       <div className="heading_container">
         <h2>Contact Us</h2>
       </div>

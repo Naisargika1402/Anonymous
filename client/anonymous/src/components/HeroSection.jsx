@@ -24,7 +24,7 @@ function HeroSection() {
   };
 
   return (
-    <div className="hero">
+    <div className="hero container">
       <div className="animation-container">
         <Lottie options={animationOptions1} style={{ marginTop: "80px" }} />
         <Lottie options={animationOptions2} />
