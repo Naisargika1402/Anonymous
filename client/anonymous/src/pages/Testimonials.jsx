@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import FeedbackForm from "../components/FeedbackForm";
+import axios from "axios";
 
 function Testimonials() {
   const [feedbackList, setFeedbackList] = useState([]);
