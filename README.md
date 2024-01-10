@@ -41,3 +41,10 @@
 7. Contact us (different page: navbar link)
 8. Login/SignUp button (clicking on it will open a dialog box)
 9. Footer
+
+# What can be included in the testimonials:
+1. Customer quotes
+2. Case studies and success stories
+3. Customer interviews
+4. Social media posts
+5. Press reviews
