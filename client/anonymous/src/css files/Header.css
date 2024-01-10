@@ -133,7 +133,7 @@
 
 .signup{
     max-width: fit-content;
-    margin:auto;
+    /* margin:auto; */
 }
 
 .signup:hover{

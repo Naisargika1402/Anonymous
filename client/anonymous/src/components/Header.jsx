@@ -36,30 +36,34 @@ function Header() {
                 About Us
               </a>
             </li>
-            <button
-              type="button"
-              className="nav-item signup btn btn-outline-primary mx-2"
-              style={{ color: "black", border: "1px solid blue" }}
-            >
-              <a
-                href="/login"
-                style={{ textDecoration: "none", color: "inherit" }}
+            <li class="nav-item">
+              <button
+                type="button"
+                className="nav-item signup btn btn-outline-primary"
+                style={{ color: "black", border: "1px solid blue" }}
               >
-                Login
-              </a>
-            </button>
-            <button
-              type="button"
-              className="nav-item signup btn btn-outline-primary"
-              style={{ color: "black", border: "1px solid blue" }}
-            >
-              <a
-                href="/signup"
-                style={{ textDecoration: "none", color: "inherit" }}
+                <a
+                  href="/login"
+                  style={{ textDecoration: "none", color: "inherit" }}
+                >
+                  Login
+                </a>
+              </button>
+            </li>
+            <li class="nav-item">
+              <button
+                type="button"
+                className="nav-item signup btn btn-outline-primary"
+                style={{ color: "black", border: "1px solid blue" }}
               >
-                Sign Up
-              </a>
-            </button>
+                <a
+                  href="/signup"
+                  style={{ textDecoration: "none", color: "inherit" }}
+                >
+                  Sign Up
+                </a>
+              </button>
+            </li>
           </ul>
         </div>
       </div>
