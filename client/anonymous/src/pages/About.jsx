@@ -2,6 +2,8 @@ import React, { useEffect, useRef } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Typed from "typed.js";
+import Lottie from "react-lottie";
+import Hello from "../json files/Hello.json";
 
 function About() {
   const el = useRef(null);
@@ -22,26 +24,30 @@ function About() {
     <div>
       <Header />
       <div className="container">
-        <h1 className="text-center my-2 pb-2 font-weight-bold fixed">
+        <h1
+          className="text-center mt-3 pb-2 font-weight-bold"
+          style={{
+            fontFamily: "font-family: 'Salsa', cursive;",
+          }}
+        >
           <span ref={el} />
         </h1>
-        <br />
-        <div>
+        <div className="mt-2">
           Welcome to Anonymous, your trusted virtual concierge, where we bring
           convenience and services right to your fingertips. Our mission is to
           simplify your life by providing a platform that connects you with a
           myriad of essential services, from plumbing and repairs to makeup
           artists, house help, packers and movers, and much more.
         </div>
-        <br />
-        <div>
-          At Anonymous, we understand the importance of basic services in your
-          daily life. Whether you need a quick plumbing fix, assistance with
-          home repairs, or professional makeup services, we've got you covered.
-          Additionally, we offer food and tiffin services on a weekly or monthly
-          basis, along with maid services for your convenience.
-        </div>
-        <br />
+        <Lottie
+          options={{
+            loop: true,
+            autoplay: true,
+            animationData: Hello,
+          }}
+          height={600}
+          width={600}
+        />
         <div>
           What sets us apart is our commitment to recommending the best services
           based on user ratings and experience. Your satisfaction is our
@@ -57,15 +63,13 @@ function About() {
           informed about upcoming appointments, making your experience with
           Anonymous organized and stress-free.
         </div>
-        <br />
-        <div>
+        <div className="my-3">
           Anonymous - Your Virtual Concierge, is more than just a service
           platform; it's a commitment to making your life easier, more
           efficient, and more enjoyable. Join us on this journey towards
           seamless convenience, where your needs are met with excellence. Thank
           you for choosing Anonymous, where service meets simplicity.
         </div>
-        <br />
       </div>
       <Footer />
     </div>
