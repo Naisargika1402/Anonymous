@@ -29,9 +29,8 @@ function Testimonials() {
     <div>
       <Header />
       <div className="container">
-        {/* Display existing testimonials, if any */}
         <h2>Testimonials</h2>
-        <div>
+        {/*<div>
           <ul>
             {feedbackList.map((item, index) => (
               <li key={index}>
@@ -40,8 +39,8 @@ function Testimonials() {
               </li>
             ))}
           </ul>
-        </div>
-        {/* Render the FeedbackForm component */}
+            </div>*/}
+
         <h2>Submit Feedback</h2>
         <FeedbackForm onSubmit={handleFeedbackSubmit} />
       </div>
