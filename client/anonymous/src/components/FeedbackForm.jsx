@@ -11,7 +11,7 @@ const FeedbackForm = ({ onSubmit }) => {
 
     try {
       // Make a POST request to submit feedback
-      await axios.post("http://localhost:4000/api/feedback", {
+      await axios.post("http://localhost:4000/api/feedback/submit", {
         feedback,
         rating,
       });

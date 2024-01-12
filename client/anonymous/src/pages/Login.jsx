@@ -1,5 +1,5 @@
 import React from "react";
-import SignUp from "./SignUp";
+// import SignUp from "./SignUp";
 import "../css files/Login-SignUp.css";
 import { Link } from "react-router-dom";
 
@@ -30,9 +30,17 @@ const Login = () => {
             Not already a user? Sign up here
   </Link>*/}
 
-          <a href="signUp.jsx" className="signup-message">
+          <div>
+            <p>
+              <Link to="/signup" className="text-center">
+                Not already a user? Sign up here.
+              </Link>
+            </p>
+          </div>
+
+          {/*<a href="signUp.jsx" className="signup-message">
             Not already a user? Sign up here
-          </a>
+</a>*/}
         </form>
       </div>
     </div>

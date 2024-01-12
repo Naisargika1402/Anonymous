@@ -15,7 +15,9 @@ function Testimonials() {
   useEffect(() => {
     const fetchFeedback = async () => {
       try {
-        const response = await axios.get("http://localhost:4000/api/feedbacks");
+        const response = await axios.get(
+          "http://localhost:4000/api/feedback/all"
+        );
         setFeedbackList(response.data);
       } catch (error) {
         console.error("Error fetching feedback:", error);

@@ -34,9 +34,17 @@ const SignUp = () => {
             Sign Up
           </button>
 
-          <Link to={Login} className="login-message">
+          {/*<Link to={Login} className="login-message">
             Already have an account? Sign in
-          </Link>
+  </Link>*/}
+
+          <div>
+            <p>
+              <Link to="/login" className="text-center">
+                Already have an account? Sign in.
+              </Link>
+            </p>
+          </div>
 
           {/*} <a href="login.html" className="login-message">
             Already have an account? Sign in
