@@ -31,7 +31,7 @@ const FeedbackForm = ({ onSubmit }) => {
   return (
     <form onSubmit={handleSubmit}>
       <label>
-        Feedback:
+        Give your Reviews
         <br />
         <textarea
           value={feedback}
@@ -39,8 +39,9 @@ const FeedbackForm = ({ onSubmit }) => {
         />
       </label>
       <br />
+      <br />
       <label>
-        Rating:
+        Rate Us
         <ReactStars
           count={5}
           value={rating}
@@ -49,6 +50,7 @@ const FeedbackForm = ({ onSubmit }) => {
           color2={"#ffd700"}
         />
       </label>
+      <br />
       <br />
       <button type="submit" className="mb-3">
         Submit Feedback
