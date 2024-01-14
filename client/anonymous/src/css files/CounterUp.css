@@ -1,0 +1,22 @@
+.numdiv{
+    width: 100%;
+    background: #ff8a1d;
+    margin: 2em auto;
+    color: aliceblue;
+    padding: 30px;
+}
+
+.num-bx{
+    text-align: center;
+    margin: 2em auto;
+}
+
+.num-bx h1{
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 600px) {
+    .num-bx{
+        width:50%;
+    }
+}
