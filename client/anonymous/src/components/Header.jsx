@@ -39,8 +39,8 @@ function Header() {
             <li class="nav-item">
               <button
                 type="button"
-                className="nav-item signup btn btn-outline-primary"
-                style={{ color: "black", border: "1px solid blue" }}
+                className="btn btn-outline-primary nav-item signup"
+                style={{border: "1px solid blue" }}
               >
                 <a
                   href="/login"
@@ -53,8 +53,8 @@ function Header() {
             <li class="nav-item">
               <button
                 type="button"
-                className="nav-item signup btn btn-outline-primary"
-                style={{ color: "black", border: "1px solid blue" }}
+                className="btn btn-outline-primary nav-item signup"
+                style={{ border: "1px solid blue" }}
               >
                 <a
                   href="/signup"
