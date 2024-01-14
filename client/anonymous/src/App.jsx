@@ -6,6 +6,7 @@ import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Testimonials from "./pages/Testimonials";
+import "./index.css";
 
 function App() {
   return (
