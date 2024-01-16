@@ -48,3 +48,12 @@
 3. Customer interviews
 4. Social media posts
 5. Press reviews
+
+# Login:
+
+1. Upon login it asks for address (map API)
+2. Page should come up with all service options plus a search bar for searching for some type of services.
+3. Then maybe promotions of our other services.
+4. If offering a discount on a service, highlight all of that.
+
+
