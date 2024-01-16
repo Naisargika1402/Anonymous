@@ -40,7 +40,7 @@ function Header() {
               <button
                 type="button"
                 className="btn btn-outline-primary nav-item signup"
-                style={{border: "1px solid blue" }}
+                style={{ border: "1px solid blue" }}
               >
                 <a
                   href="/login"
