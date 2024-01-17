@@ -51,9 +51,10 @@
 
 # Login:
 
-1. Upon login it asks for address (map API)
-2. Page should come up with all service options plus a search bar for searching for some type of services.
-3. Then maybe promotions of our other services.
-4. If offering a discount on a service, highlight all of that.
+1. Clicking on the **View More** or **Know More** buttons on the homepage directs the user to SignUp page.
+2. Upon login it asks for address (map API)
+3. Page should come up with all service options plus a search bar for searching for some type of services.
+4. Then maybe promotions of our other services.
+5. If offering a discount on a service, highlight all of that.
 
 
