@@ -57,7 +57,7 @@ function Header() {
                 style={{ border: "1px solid blue" }}
               >
                 <a
-                  href="/signup"
+                  href="/register"
                   style={{ textDecoration: "none", color: "inherit" }}
                 >
                   Sign Up
