@@ -19,7 +19,7 @@ function App() {
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/about" element={<About />} />
           <Route path="/login" element={<UserPage />} />
-          <Route path="/signup" element={<SignUp />} />
+          <Route path="/register" element={<SignUp />} />
         </Routes>
       </BrowserRouter>
     </Container>
