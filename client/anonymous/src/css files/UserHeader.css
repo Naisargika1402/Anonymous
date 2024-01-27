@@ -1,0 +1,50 @@
+.search {
+    position: relative;
+  }
+  
+  .search button,
+  .search span {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .search > * > svg {
+    display: block;
+  }
+  
+  .search span {
+    left: 15px;
+    opacity: .5;
+    margin-top: 1px;
+  }
+
+  .search button {
+    right: 15px;
+    left: auto;
+    border: none;
+    margin: 0;
+    padding: 0;
+    background: none;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  .search button:hover {
+    color: #052a63;
+  }
+
+  .search input {
+    box-sizing: border-box;
+    display: block;
+    width: 14em;
+    height: 2em;
+    border-radius: 5px;
+    padding: 0 45px 0 40px;
+    font-size: 20px;
+    outline: none;
+    border: 2px;
+    background: white;
+  }
+  
+  

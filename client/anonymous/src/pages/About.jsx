@@ -45,7 +45,7 @@ function About() {
             autoplay: true,
             animationData: Hello,
           }}
-          height={600}
+          height={400}
           width={600}
         />
         <div>
