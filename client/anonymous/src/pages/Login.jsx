@@ -63,19 +63,11 @@ const Login = () => {
           <button type="submit" className="login-button">
             Login
           </button>
+          <p className="text-center my-3 text-white">
+            Not Registered?&nbsp;
+            <Link to="/register">Sign Up</Link>
+          </p>
         </form>
-        {/*<Link to={Login} className="login-message">
-            Already have an account? Sign in
-  </Link>*/}
-
-        <p>Not Registered?</p>
-        <Link to="/register" className="login-button">
-          Sign Up
-        </Link>
-
-        {/*} <a href="login.html" className="login-message">
-            Already have an account? Sign in
-  </a>*/}
       </div>
     </div>
   );

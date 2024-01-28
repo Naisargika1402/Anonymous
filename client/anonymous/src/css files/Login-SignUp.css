@@ -34,7 +34,7 @@ body {
   box-shadow: 0 0 15px 0 var(--color);
   padding: 40px 30px;
   width: 80%;
-  height: 90vh;
+  height:95vh;
   max-width: 600px;
   border-radius: 20px;
   opacity: 0.7;
@@ -46,7 +46,7 @@ body {
   box-shadow: 0 0 15px 0 var(--color);
   padding: 40px 30px;
   width: 80%;
-  height: 60vh;
+  height: 50vh; 
   max-width: 600px;
   border-radius: 20px;
   opacity: 0.7;
@@ -63,14 +63,14 @@ body {
 .form {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  /* gap: 2px; */
   /* margin-top: 40px; */
 }
 
 .input-group {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 1px;
 }
 
 .input-group label {
@@ -79,7 +79,7 @@ body {
 }
 
 .input-group input {
-  font-size: 1.25rem;
+  font-size: 1rem;
   padding: .5em;
   background-color: hsl(var(--primary-light-hsl), .3);
   border: none;

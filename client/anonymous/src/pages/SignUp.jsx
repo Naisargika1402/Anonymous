@@ -10,6 +10,9 @@ const SignUp = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
+  const [age, setAge] = useState(""); // Added
+  const [gender, setGender] = useState(""); // Added
+  const [address, setAddress] = useState(""); // Added
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
@@ -25,6 +28,9 @@ const SignUp = () => {
         name,
         email,
         phoneNumber,
+        age, // Added
+        gender, // Added
+        address, // Added
         password,
         confirmPassword,
       })
@@ -75,6 +81,43 @@ const SignUp = () => {
             />
           </div>
           <div className="input-group">
+            <label htmlFor="age">Age</label>
+            <input
+              type="number"
+              name="age"
+              id="age"
+              placeholder="Enter Age"
+              autoComplete="off"
+              onChange={(e) => setAge(e.target.value)}
+            />
+          </div>
+          <div className="input-group">
+            <label htmlFor="gender">Gender</label>
+            <select
+              name="gender"
+              id="gender"
+              onChange={(e) => setGender(e.target.value)}
+            >
+              <option value="" disabled selected>
+                Select Gender
+              </option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div className="input-group">
+            <label htmlFor="address">Address</label>
+            <input
+              type="text"
+              name="address"
+              id="address"
+              placeholder="Enter Address"
+              autoComplete="off"
+              onChange={(e) => setAddress(e.target.value)}
+            />
+          </div>
+          <div className="input-group">
             <label htmlFor="createPassword">Create Password</label>
             <input
               type="password"
@@ -99,12 +142,11 @@ const SignUp = () => {
           <button type="submit" className="login-button">
             Sign Up
           </button>
+          <p className="text-center my-2 text-white">
+            Already a user?&nbsp;
+            <Link to="/login">Login</Link>
+          </p>
         </form>
-
-        <p>Already a user?</p>
-        <Link to="/login" className="login-button">
-          Login
-        </Link>
       </div>
     </div>
   );
