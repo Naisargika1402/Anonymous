@@ -23,7 +23,7 @@ const Login = () => {
       .then((result) => {
         console.log(result.data);
         if (result.data === "Success") {
-          navigate("/");
+          navigate("/userpage");
         }
       })
       .catch((err) => console.log(err));
