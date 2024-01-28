@@ -44,8 +44,8 @@ const UserHeader = ({ searchInput, findMyLocation }) => {
               </a>
             </li>
             <li class="nav-item">
-              <a className="nav-link text-black" href="/about">
-                MyAccount
+              <a className="nav-link text-black" href="/userprofile">
+                Your Profile
               </a>
             </li>
             <li class="nav-item">

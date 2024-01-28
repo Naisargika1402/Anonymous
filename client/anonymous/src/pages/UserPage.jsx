@@ -4,6 +4,7 @@ import HomeServices from "../components/HomeServices";
 import Container from "../styles/Container";
 import "../css files/UserPage.css";
 import { Search } from "@material-ui/icons";
+import Footer from "../components/Footer";
 
 const apiKey = "AIzaSyDKc-PxciHbJWqufj9dakp14I9aCuxw1oc";
 const mapApiJs = "https://maps.googleapis.com/maps/api/js";
@@ -153,6 +154,7 @@ function UserPage() {
         <Search></Search>
       </div>
       <HomeServices></HomeServices>
+      <Footer />
     </Container>
   );
 }
