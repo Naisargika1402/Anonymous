@@ -151,7 +151,7 @@ function UserProfile() {
   return (
     <>
       <UserHeader searchInput={searchInput} findMyLocation={findMyLocation} />
-      <div className="container mt-5">
+      <div className="container mt-5" style={{ maxWidth: "700px" }}>
         <div className="card text-center mb-4">
           <div className="card-body">
             <h2 className="card-title">Hello, {firstName}</h2>
@@ -187,8 +187,8 @@ function UserProfile() {
             </ul>
           </div>
         </div>
-        <Footer />
       </div>
+      <Footer />
     </>
   );
 }
