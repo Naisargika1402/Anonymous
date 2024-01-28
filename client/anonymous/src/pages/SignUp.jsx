@@ -37,7 +37,7 @@ const SignUp = () => {
 
   return (
     <div className="full-screen-container">
-      <div className="login-container" id="loginContainer">
+      <div className="login-container2" id="loginContainer">
         <h1 className="login-title">Sign Up</h1>
         <form className="form" id="signupForm" onSubmit={handleSubmit}>
           {/* Signup form content */}

@@ -31,7 +31,7 @@ const Login = () => {
 
   return (
     <div className="full-screen-container">
-      <div className="login-container" id="loginContainer">
+      <div className="login-container1" id="loginContainer">
         <h1 className="login-title">Login</h1>
         <form className="form" id="signupForm" onSubmit={handleSubmit}>
           {/* Signup form content */}
