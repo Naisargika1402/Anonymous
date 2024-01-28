@@ -31,7 +31,7 @@ const UserHeader = ({ searchInput, findMyLocation }) => {
                 <input
                   ref={searchInput}
                   type="text"
-                  placeholder="Search location...."
+                  placeholder="Search location..."
                 />
                 <button onClick={findMyLocation}>
                   <GpsFixed />
