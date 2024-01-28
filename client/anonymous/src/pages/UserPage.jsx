@@ -5,6 +5,7 @@ import Container from "../styles/Container";
 import "../css files/UserPage.css";
 import { Search } from "@material-ui/icons";
 import Footer from "../components/Footer";
+import axios from "axios";
 
 const apiKey = "AIzaSyDKc-PxciHbJWqufj9dakp14I9aCuxw1oc";
 const mapApiJs = "https://maps.googleapis.com/maps/api/js";
@@ -86,6 +87,49 @@ const extractAddress = (place) => {
 function UserPage() {
   const searchInput = useRef(null);
   const [address, setAddress] = useState({});
+  const [userDetails, setUserDetails] = useState({});
+  const [firstName, setFirstName] = useState(""); // Corrected state variable
+  // Fetch user's name from localStorage or wherever you store it
+  // useEffect(() => {
+  //   const loggedInUserName = localStorage.getItem("loggedInUserName");
+  //   if (loggedInUserName) {
+  //     // Extract the first name from the full name
+  //     const firstName = loggedInUserName.split(" ")[0];
+  //     setFirstName(firstName);
+  //   }
+  // }, []);
+  useEffect(() => {
+    const fetchUserDetails = async () => {
+      try {
+        const loggedInUserEmail = localStorage.getItem("loggedInUserEmail");
+
+        if (loggedInUserEmail) {
+          const response = await axios.post(
+            "http://localhost:4000/getUserDetails",
+            {
+              email: loggedInUserEmail,
+            }
+          );
+
+          setUserDetails(response.data);
+
+          // Extract the first name from the full name
+          const firstName = response.data.name
+            ? response.data.name.split(" ")[0]
+            : "";
+          setFirstName(firstName); // Corrected state update
+        } else {
+          console.log("Email id not available");
+        }
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchUserDetails();
+  }, []);
+
+  // const firstName = userDetails.name ? userDetails.name.split(" ")[0] : "";
 
   // init gmap script
   const initMapScript = () => {
@@ -148,7 +192,9 @@ function UserPage() {
         searchInput={searchInput}
         findMyLocation={findMyLocation}
       ></UserHeader>
-      <h1 className="userheading">Services You're Looking For...</h1>
+      <h1 className="userheading">
+        Hello {firstName}, what would you like today?
+      </h1>
       <div className="mainsearch">
         <input placeholder="search for services" />
         <Search></Search>
