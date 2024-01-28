@@ -1,16 +1,13 @@
 import React, { useState } from "react";
 import "../css files/Login-SignUp.css";
-// import Login from "./Login";
+
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
-  // const [name, setName] = useState();
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
-  // const [confirmPassword, setConfirmPassword] = useState();
-  // const [phoneNumber, setPhoneNumber] = useState();
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
@@ -23,6 +20,8 @@ const Login = () => {
       .then((result) => {
         console.log(result.data);
         if (result.data === "Success") {
+          // Store the user's email in localStorage
+          localStorage.setItem("loggedInUserEmail", email);
           navigate("/userpage");
         }
       })

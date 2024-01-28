@@ -25,4 +25,23 @@ router.post("/register", (req, res) => {
     .catch((err) => res.json(err));
 });
 
+// Add a new route to fetch user details by email
+router.post("/getUserDetails", (req, res) => {
+  const { email } = req.body;
+  userModel
+    .findOne({ email: email })
+    .select("-password -confirmPassword") // exclude password and confirmPassword
+    .then((user) => {
+      if (user) {
+        res.json(user);
+      } else {
+        res.json("User not found");
+      }
+    })
+    .catch((err) => {
+      console.error(err);
+      res.status(500).json("Internal Server Error");
+    });
+});
+
 module.exports = router;

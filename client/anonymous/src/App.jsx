@@ -8,6 +8,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Testimonials from "./pages/Testimonials";
 import "./index.css";
 import UserPage from "./pages/UserPage";
+import UserProfile from "./pages/UserProfile";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<SignUp />} />
           <Route path="/userpage" element={<UserPage />} />
+          <Route path="/getUserDetails" element={<UserProfile />} />
         </Routes>
       </BrowserRouter>
     </Container>
