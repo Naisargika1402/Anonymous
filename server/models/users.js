@@ -23,6 +23,10 @@ const usersSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  designation: {
+    type: String,
+    required: true,
+  },
   address: {
     type: String,
     required: true,

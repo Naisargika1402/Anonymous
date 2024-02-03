@@ -14,6 +14,7 @@ const SignUp = () => {
   const [gender, setGender] = useState(""); // Added
   const [address, setAddress] = useState(""); // Added
   const navigate = useNavigate();
+  const [designation, setDesignation] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -30,6 +31,7 @@ const SignUp = () => {
         phoneNumber,
         age, // Added
         gender, // Added
+        designation, // Added
         address, // Added
         password,
         confirmPassword,

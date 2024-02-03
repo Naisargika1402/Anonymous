@@ -50,8 +50,9 @@ const Login = () => {
               name="designation"
               id="designation"
               onChange={(e) => setDesignation(e.target.value)}
+              defaultValue="" // Use defaultValue instead of disabled selected
             >
-              <option value="" disabled selected>
+              <option value="" disabled>
                 Select Designation
               </option>
               <option value="user">User</option>
