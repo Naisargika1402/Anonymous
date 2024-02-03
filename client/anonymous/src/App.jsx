@@ -3,7 +3,7 @@ import Container from "./styles/Container";
 import About from "./pages/About";
 import Services from "./pages/Services";
 import Login from "./pages/Login";
-// import LoginService from "./pages/LoginService";
+import WorkerPage from "./pages/WorkerPage";
 import SignUp from "./pages/SignUp";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Testimonials from "./pages/Testimonials";
@@ -23,6 +23,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<SignUp />} />
           <Route path="/userpage" element={<UserPage />} />
+          <Route path="/workerpage" element={<WorkerPage />} />
           <Route path="/getUserDetails" element={<UserProfile />} />
         </Routes>
       </BrowserRouter>
