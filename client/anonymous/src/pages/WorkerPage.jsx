@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import UserHeader from "./UserHeader";
+import WorkerHeader from "./WorkerHeader";
 import Footer from "../components/Footer";
 
 function WorkerPage() {
@@ -27,7 +27,7 @@ function WorkerPage() {
 
   return (
     <>
-      <UserHeader />
+      <WorkerHeader />
       <div className="container mt-5" style={{ maxWidth: "700px" }}>
         <div className="card text-center mb-4">
           <div className="card-body">
