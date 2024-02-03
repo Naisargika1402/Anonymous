@@ -5,13 +5,13 @@ import "../css files/UserHeader.css";
 
 const UserHeader = ({ searchInput, findMyLocation }) => {
   return (
-    <nav class="navbar navbar-expand-lg custom_nav-container mynav">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="/">
+    <nav className="navbar navbar-expand-lg custom_nav-container mynav">
+      <div className="container-fluid">
+        <a className="navbar-brand" href="/">
           Anonymous
         </a>
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
@@ -19,11 +19,11 @@ const UserHeader = ({ searchInput, findMyLocation }) => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav">
+            <li className="nav-item">
               <div className="search">
                 <span>
                   <Search />
@@ -38,17 +38,17 @@ const UserHeader = ({ searchInput, findMyLocation }) => {
                 </button>
               </div>
             </li>
-            <li class="nav-item">
+            <li className="nav-item">
               <a className="nav-link text-black" href="/testimonials">
                 Bookings
               </a>
             </li>
-            <li class="nav-item">
+            <li className="nav-item">
               <a className="nav-link text-black" href="/getUserDetails">
                 Your Profile
               </a>
             </li>
-            <li class="nav-item">
+            <li className="nav-item">
               <button
                 type="button"
                 className="btn btn-outline-primary nav-item signup"

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import "../css files/Login-SignUp.css";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import "../css files/Login-SignUp.css";
 
 const SignUp = () => {
   const [name, setName] = useState("");
@@ -10,11 +10,13 @@ const SignUp = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
-  const [age, setAge] = useState(""); // Added
-  const [gender, setGender] = useState(""); // Added
-  const [address, setAddress] = useState(""); // Added
-  const navigate = useNavigate();
+  const [age, setAge] = useState("");
+  const [gender, setGender] = useState("");
+  const [address, setAddress] = useState("");
   const [designation, setDesignation] = useState("");
+  const [expertise, setExpertise] = useState("");
+  const [experience, setExperience] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -24,18 +26,25 @@ const SignUp = () => {
       return;
     }
 
+    const userData = {
+      name,
+      email,
+      phoneNumber,
+      age,
+      gender,
+      designation,
+      address,
+      password,
+      confirmPassword,
+    };
+
+    if (designation === "worker") {
+      userData.expertise = expertise;
+      userData.experience = experience;
+    }
+
     axios
-      .post("http://localhost:4000/register", {
-        name,
-        email,
-        phoneNumber,
-        age, // Added
-        gender, // Added
-        designation, // Added
-        address, // Added
-        password,
-        confirmPassword,
-      })
+      .post("http://localhost:4000/register", userData)
       .then((res) => {
         console.log(res.data);
         navigate("/login");
@@ -48,7 +57,6 @@ const SignUp = () => {
       <div className="login-container2" id="loginContainer">
         <h1 className="login-title">Sign Up</h1>
         <form className="form" id="signupForm" onSubmit={handleSubmit}>
-          {/* Signup form content */}
           <div className="input-group">
             <label htmlFor="name">Name</label>
             <input
@@ -103,9 +111,9 @@ const SignUp = () => {
               <option value="" disabled selected>
                 Select Gender
               </option>
-              <option value="male">Male</option>
-              <option value="female">Female</option>
-              <option value="other">Other</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Other">Other</option>
             </select>
           </div>
           <div className="input-group">
@@ -122,7 +130,32 @@ const SignUp = () => {
               <option value="user">User</option>
             </select>
           </div>
-
+          {designation === "worker" && (
+            <>
+              <div className="input-group">
+                <label htmlFor="expertise">Expertise</label>
+                <input
+                  type="text"
+                  name="expertise"
+                  id="expertise"
+                  placeholder="Enter Expertise"
+                  autoComplete="off"
+                  onChange={(e) => setExpertise(e.target.value)}
+                />
+              </div>
+              <div className="input-group">
+                <label htmlFor="experience">Experience (in years)</label>
+                <input
+                  type="number"
+                  name="experience"
+                  id="experience"
+                  placeholder="Enter Experience"
+                  autoComplete="off"
+                  onChange={(e) => setExperience(e.target.value)}
+                />
+              </div>
+            </>
+          )}
           <div className="input-group">
             <label htmlFor="address">Address</label>
             <input

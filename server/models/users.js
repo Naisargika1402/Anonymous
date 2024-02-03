@@ -27,6 +27,12 @@ const usersSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  expertise: {
+    type: String,
+  },
+  experience: {
+    type: Number,
+  },
   address: {
     type: String,
     required: true,
