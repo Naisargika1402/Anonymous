@@ -36,26 +36,19 @@ function Header() {
                 About Us
               </a>
             </li>
-            <li className="nav-item dropdown">
-              <a
-                className="nav-link dropdown-toggle text-black"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
+            <li className="nav-item">
+              <button
+                type="button"
+                className="btn btn-outline-primary nav-item signup"
+                style={{ border: "1px solid blue" }}
               >
-                Login
-              </a>
-              <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a className="dropdown-item" href="/login">
-                  Login as a User
+                <a
+                  href="/login"
+                  style={{ textDecoration: "none", color: "inherit" }}
+                >
+                  Login
                 </a>
-                <a className="dropdown-item" href="/login-service">
-                  Login as a Service Provider
-                </a>
-              </div>
+              </button>
             </li>
             <li className="nav-item">
               <button
