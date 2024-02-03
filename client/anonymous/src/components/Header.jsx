@@ -52,7 +52,7 @@ function Header() {
                 <a className="dropdown-item" href="/login">
                   Login as a User
                 </a>
-                <a className="dropdown-item" href="/login/service-provider">
+                <a className="dropdown-item" href="/login-service">
                   Login as a Service Provider
                 </a>
               </div>
