@@ -41,9 +41,9 @@ const Login = () => {
     <div className="full-screen-container">
       <div className="login-container1" id="loginContainer">
         <h1 className="login-title">Login</h1>
+        <hr className="text-white" />
         <form className="form" id="signupForm" onSubmit={handleSubmit}>
           {/* Login form content */}
-
           <div className="input-group">
             <label htmlFor="designation">Designation</label>
             <select
@@ -59,7 +59,6 @@ const Login = () => {
               <option value="worker">Worker</option>
             </select>
           </div>
-
           <div className="input-group">
             <label htmlFor="signupEmail">Email</label>
             <input
@@ -71,7 +70,6 @@ const Login = () => {
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
-
           <div className="input-group">
             <label htmlFor="createPassword">Enter Password</label>
             <input
@@ -83,11 +81,10 @@ const Login = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-
-          <button type="submit" className="login-button">
+          <button type="submit" className="login-button mt-2">
             Login
           </button>
-          <p className="text-center my-3 text-white">
+          <p className="text-center my-2 text-white">
             Not Registered?&nbsp;
             <Link to="/register">Sign Up</Link>
           </p>
