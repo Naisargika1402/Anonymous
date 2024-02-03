@@ -107,6 +107,21 @@ const SignUp = () => {
             </select>
           </div>
           <div className="input-group">
+            <label htmlFor="designation">Designation</label>
+            <select
+              name="designation"
+              id="designation"
+              onChange={(e) => setDesignation(e.target.value)}
+            >
+              <option value="" disabled selected>
+                Select Designation
+              </option>
+              <option value="worker">Worker</option>
+              <option value="user">User</option>
+            </select>
+          </div>
+
+          <div className="input-group">
             <label htmlFor="address">Address</label>
             <input
               type="text"
