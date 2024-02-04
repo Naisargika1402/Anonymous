@@ -19,7 +19,7 @@ function SignUpRedirect() {
       <br />
       <div>
         <Link
-          to="/register"
+          to="/signup-employee"
           className="signup-box"
           onClick={() => handleBoxClick("employee")}
         >
@@ -28,7 +28,7 @@ function SignUpRedirect() {
         </Link>
 
         <Link
-          to="/register"
+          to="/signup-user"
           className="signup-box"
           onClick={() => handleBoxClick("customer")}
         >

@@ -5,7 +5,8 @@ import Services from "./pages/Services";
 import Login from "./pages/Login";
 import EmployeePage from "./pages/EmployeePage";
 import SignUpRedirect from "./pages/SignUpRedirect";
-import SignUp from "./pages/SignUp";
+import SignupUser from "./pages/SignupUser";
+import SignupEmployee from "./pages/SignupEmployee";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Testimonials from "./pages/Testimonials";
 import "./index.css";
@@ -23,7 +24,8 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup-role" element={<SignUpRedirect />} />
-          <Route path="/register" element={<SignUp />} />
+          <Route path="/signup-user" element={<SignupUser />} />
+          <Route path="/signup-employee" element={<SignupEmployee />} />
           <Route path="/userpage" element={<UserPage />} />
           <Route path="/employeepage" element={<EmployeePage />} />
           <Route path="/getUserDetails" element={<UserProfile />} />

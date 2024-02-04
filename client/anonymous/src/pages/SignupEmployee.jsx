@@ -4,7 +4,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "../css files/Login-SignUp.css";
 
-const SignUp = () => {
+const SignupUser = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -44,7 +44,7 @@ const SignUp = () => {
     }
 
     axios
-      .post("http://localhost:4000/register", userData)
+      .post("http://localhost:4000/signup-employee", userData)
       .then((res) => {
         console.log(res.data);
         navigate("/login");
@@ -216,4 +216,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default SignupUser;
