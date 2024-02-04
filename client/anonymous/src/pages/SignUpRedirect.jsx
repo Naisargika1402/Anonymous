@@ -11,7 +11,7 @@ function SignUpRedirect() {
 
   return (
     <div className="signup-container">
-      <h1 className="signup-header">Hello, Please select your role.</h1>
+      <h1 className="signup-header">Hola, please select your role.</h1>
       <p className="signup-description">
         We'll personalize your setup experience accordingly.
       </p>
