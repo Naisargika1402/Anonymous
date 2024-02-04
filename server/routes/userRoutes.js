@@ -17,7 +17,15 @@ router.post("/login", (req, res) => {
   });
 });
 
-router.post("/register", (req, res) => {
+router.post("/signup-user", (req, res) => {
+  console.log(req.body);
+  userModel
+    .create(req.body)
+    .then((users) => res.json(users))
+    .catch((err) => res.json(err));
+});
+
+router.post("/signup-employee", (req, res) => {
   console.log(req.body);
   userModel
     .create(req.body)

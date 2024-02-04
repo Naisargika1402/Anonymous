@@ -29,6 +29,7 @@ const SignupUser = () => {
       phoneNumber,
       age,
       gender,
+      designation: "User",
       address,
       password,
       confirmPassword,

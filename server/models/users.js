@@ -30,6 +30,9 @@ const usersSchema = new mongoose.Schema({
   expertise: {
     type: String,
   },
+  skills: {
+    type: [String],
+  },
   experience: {
     type: Number,
   },

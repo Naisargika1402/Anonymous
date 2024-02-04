@@ -1,13 +1,12 @@
 import React, { useState } from "react";
-import "../css files/Login-SignUp.css";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import "../css files/Login-SignUp.css";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [designation, setDesignation] = useState("");
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
@@ -17,21 +16,28 @@ const Login = () => {
       .post("http://localhost:4000/login", {
         email,
         password,
-        designation,
       })
       .then((result) => {
         console.log(result.data);
         if (result.data === "Success") {
-          // Store the user's email and designation in localStorage
-          localStorage.setItem("loggedInUserEmail", email);
-          localStorage.setItem("loggedInUserDesignation", designation);
+          // Fetch user details to determine the role
+          axios
+            .post("http://localhost:4000/getUserDetails", { email })
+            .then((userDetails) => {
+              const { designation } = userDetails.data;
 
-          // Redirect based on designation
-          if (designation === "Employee") {
-            navigate("/employeepage");
-          } else if (designation === "User") {
-            navigate("/userpage");
-          }
+              // Store the user's email and designation in localStorage
+              localStorage.setItem("loggedInUserEmail", email);
+              localStorage.setItem("loggedInUserDesignation", designation);
+
+              // Redirect based on designation
+              if (designation === "Employee") {
+                navigate("/employeepage");
+              } else if (designation === "User") {
+                navigate("/userpage");
+              }
+            })
+            .catch((err) => console.log(err));
         }
       })
       .catch((err) => console.log(err));
@@ -44,21 +50,6 @@ const Login = () => {
         <hr className="text-white" />
         <form className="form" id="signupForm" onSubmit={handleSubmit}>
           {/* Login form content */}
-          <div className="input-group">
-            <label htmlFor="designation">Role</label>
-            <select
-              name="designation"
-              id="designation"
-              onChange={(e) => setDesignation(e.target.value)}
-              defaultValue="" // Use defaultValue instead of disabled selected
-            >
-              <option value="" disabled>
-                Select your role
-              </option>
-              <option value="User">User</option>
-              <option value="Employee">Employee</option>
-            </select>
-          </div>
           <div className="input-group">
             <label htmlFor="signupEmail">Email</label>
             <input
@@ -86,7 +77,7 @@ const Login = () => {
           </button>
           <p className="text-center my-2 text-white">
             Not Registered?&nbsp;
-            <Link to="/register">Sign Up</Link>
+            <Link to="/signup-role">Sign Up</Link>
           </p>
         </form>
       </div>

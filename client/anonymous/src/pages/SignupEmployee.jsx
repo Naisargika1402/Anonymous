@@ -12,10 +12,20 @@ const SignupEmployee = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [age, setAge] = useState("");
   const [gender, setGender] = useState("");
-  const [address, setAddress] = useState("");
   const [expertise, setExpertise] = useState("");
+  const [skills, setSkills] = useState([]);
+  const [address, setAddress] = useState("");
   const [experience, setExperience] = useState("");
   const navigate = useNavigate();
+
+  const expertiseOptions = [
+    "Maintenance",
+    "Electrical",
+    "Plumbing",
+    "Food Services",
+    "Cleaning",
+    "Grooming",
+  ];
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -31,11 +41,13 @@ const SignupEmployee = () => {
       phoneNumber,
       age,
       gender,
+      designation: "Employee",
       address,
       password,
       confirmPassword,
-      expertise, // Include expertise in the userData
-      experience, // Include experience in the userData
+      expertise,
+      skills,
+      experience,
     };
 
     axios
@@ -68,15 +80,30 @@ const SignupEmployee = () => {
                 />
               </div>
               <div className="input-group">
-                <label htmlFor="signupEmail">Email</label>
+                <label htmlFor="address">Address</label>
                 <input
-                  type="email"
-                  name="signupEmail"
-                  id="signupEmail"
-                  placeholder="Enter e-mail"
+                  type="text"
+                  name="address"
+                  id="address"
+                  placeholder="Enter Address"
                   autoComplete="off"
-                  onChange={(e) => setEmail(e.target.value)}
+                  onChange={(e) => setAddress(e.target.value)}
                 />
+              </div>
+              <div className="input-group">
+                <label htmlFor="gender">Gender</label>
+                <select
+                  name="gender"
+                  id="gender"
+                  onChange={(e) => setGender(e.target.value)}
+                >
+                  <option value="" disabled selected>
+                    Select Gender
+                  </option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Other">Other</option>
+                </select>
               </div>
               <div className="input-group">
                 <label htmlFor="phoneNumber">Phone Number</label>
@@ -101,32 +128,45 @@ const SignupEmployee = () => {
                 />
               </div>
               <div className="input-group">
-                <label htmlFor="gender">Gender</label>
-                <select
-                  name="gender"
-                  id="gender"
-                  onChange={(e) => setGender(e.target.value)}
-                >
-                  <option value="" disabled selected>
-                    Select Gender
-                  </option>
-                  <option value="Male">Male</option>
-                  <option value="Female">Female</option>
-                  <option value="Other">Other</option>
-                </select>
+                <label htmlFor="signupEmail">Email</label>
+                <input
+                  type="email"
+                  name="signupEmail"
+                  id="signupEmail"
+                  placeholder="Enter e-mail"
+                  autoComplete="off"
+                  onChange={(e) => setEmail(e.target.value)}
+                />
               </div>
             </div>
             <div className="col">
               {/* Right column */}
               <div className="input-group">
                 <label htmlFor="expertise">Expertise</label>
-                <input
-                  type="text"
+                <select
                   name="expertise"
                   id="expertise"
-                  placeholder="Enter Expertise"
-                  autoComplete="off"
                   onChange={(e) => setExpertise(e.target.value)}
+                >
+                  <option value="" disabled selected>
+                    Select Expertise
+                  </option>
+                  {expertiseOptions.map((option) => (
+                    <option key={option} value={option}>
+                      {option}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <div className="input-group">
+                <label htmlFor="skills">List your Skills</label>
+                <input
+                  type="text"
+                  name="skills"
+                  id="skills"
+                  placeholder="Enter Skills (comma separated)"
+                  autoComplete="off"
+                  onChange={(e) => setSkills(e.target.value.split(","))}
                 />
               </div>
               <div className="input-group">
@@ -138,17 +178,6 @@ const SignupEmployee = () => {
                   placeholder="Enter Experience"
                   autoComplete="off"
                   onChange={(e) => setExperience(e.target.value)}
-                />
-              </div>
-              <div className="input-group">
-                <label htmlFor="address">Address</label>
-                <input
-                  type="text"
-                  name="address"
-                  id="address"
-                  placeholder="Enter Address"
-                  autoComplete="off"
-                  onChange={(e) => setAddress(e.target.value)}
                 />
               </div>
               <div className="input-group">
