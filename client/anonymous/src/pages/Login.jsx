@@ -27,9 +27,9 @@ const Login = () => {
           localStorage.setItem("loggedInUserDesignation", designation);
 
           // Redirect based on designation
-          if (designation === "worker") {
-            navigate("/workerpage");
-          } else if (designation === "user") {
+          if (designation === "Employee") {
+            navigate("/employeepage");
+          } else if (designation === "User") {
             navigate("/userpage");
           }
         }
@@ -45,7 +45,7 @@ const Login = () => {
         <form className="form" id="signupForm" onSubmit={handleSubmit}>
           {/* Login form content */}
           <div className="input-group">
-            <label htmlFor="designation">Designation</label>
+            <label htmlFor="designation">Role</label>
             <select
               name="designation"
               id="designation"
@@ -55,8 +55,8 @@ const Login = () => {
               <option value="" disabled>
                 Select Designation
               </option>
-              <option value="user">User</option>
-              <option value="worker">Worker</option>
+              <option value="User">User</option>
+              <option value="Employee">Employee</option>
             </select>
           </div>
           <div className="input-group">

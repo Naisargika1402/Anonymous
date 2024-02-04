@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import WorkerHeader from "./WorkerHeader";
+import WorkerHeader from "./EmployeeHeader";
 import Footer from "../components/Footer";
 
-function WorkerPage() {
+function EmployeePage() {
   const [workerDetails, setWorkerDetails] = useState(null);
 
   useEffect(() => {
@@ -36,6 +36,10 @@ function WorkerPage() {
             </h2>
             <hr />
             <ul className="list-group list-group-flush">
+              <li className="list-group-item">
+                <span style={{ color: "#F28500" }}>Employee ID:</span>{" "}
+                {workerDetails._id}
+              </li>
               <li className="list-group-item">
                 <span style={{ color: "#F28500" }}>Full Name:</span>{" "}
                 {workerDetails.name}
@@ -81,4 +85,4 @@ function WorkerPage() {
   );
 }
 
-export default WorkerPage;
+export default EmployeePage;

@@ -38,7 +38,7 @@ const SignUp = () => {
       confirmPassword,
     };
 
-    if (designation === "worker") {
+    if (designation === "Employee") {
       userData.expertise = expertise;
       userData.experience = experience;
     }
@@ -124,20 +124,20 @@ const SignUp = () => {
             <div className="col">
               {/* Right column */}
               <div className="input-group">
-                <label htmlFor="designation">Designation</label>
+                <label htmlFor="designation">Select your role</label>
                 <select
                   name="designation"
                   id="designation"
                   onChange={(e) => setDesignation(e.target.value)}
                 >
                   <option value="" disabled selected>
-                    Select Designation
+                    Select
                   </option>
-                  <option value="worker">Worker</option>
-                  <option value="user">User</option>
+                  <option value="Employee">Employee</option>
+                  <option value="User">User</option>
                 </select>
               </div>
-              {designation === "worker" && (
+              {designation === "Employee" && (
                 <>
                   <div className="input-group">
                     <label htmlFor="expertise">Expertise</label>
