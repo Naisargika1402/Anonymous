@@ -53,7 +53,7 @@ const Login = () => {
               defaultValue="" // Use defaultValue instead of disabled selected
             >
               <option value="" disabled>
-                Select Designation
+                Select your role
               </option>
               <option value="User">User</option>
               <option value="Employee">Employee</option>
