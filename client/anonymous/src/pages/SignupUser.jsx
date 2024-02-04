@@ -13,9 +13,6 @@ const SignupUser = () => {
   const [age, setAge] = useState("");
   const [gender, setGender] = useState("");
   const [address, setAddress] = useState("");
-  const [designation, setDesignation] = useState("");
-  const [expertise, setExpertise] = useState("");
-  const [experience, setExperience] = useState("");
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
@@ -32,16 +29,10 @@ const SignupUser = () => {
       phoneNumber,
       age,
       gender,
-      designation,
       address,
       password,
       confirmPassword,
     };
-
-    if (designation === "Employee") {
-      userData.expertise = expertise;
-      userData.experience = experience;
-    }
 
     axios
       .post("http://localhost:4000/signup-user", userData)
@@ -55,7 +46,7 @@ const SignupUser = () => {
   return (
     <div className="full-screen-container">
       <div className="login-container2" id="loginContainer">
-        <h1 className="login-title">Sign Up</h1>
+        <h1 className="login-title">User SignUp</h1>
         <hr className="text-white" />
         <form className="form mt-3" id="signupForm" onSubmit={handleSubmit}>
           <div className="row">
@@ -123,46 +114,6 @@ const SignupUser = () => {
             </div>
             <div className="col">
               {/* Right column */}
-              <div className="input-group">
-                <label htmlFor="designation">Select your role</label>
-                <select
-                  name="designation"
-                  id="designation"
-                  onChange={(e) => setDesignation(e.target.value)}
-                >
-                  <option value="" disabled selected>
-                    Select
-                  </option>
-                  <option value="Employee">Employee</option>
-                  <option value="User">User</option>
-                </select>
-              </div>
-              {designation === "Employee" && (
-                <>
-                  <div className="input-group">
-                    <label htmlFor="expertise">Expertise</label>
-                    <input
-                      type="text"
-                      name="expertise"
-                      id="expertise"
-                      placeholder="Enter Expertise"
-                      autoComplete="off"
-                      onChange={(e) => setExpertise(e.target.value)}
-                    />
-                  </div>
-                  <div className="input-group">
-                    <label htmlFor="experience">Experience (in years)</label>
-                    <input
-                      type="number"
-                      name="experience"
-                      id="experience"
-                      placeholder="Enter Experience"
-                      autoComplete="off"
-                      onChange={(e) => setExperience(e.target.value)}
-                    />
-                  </div>
-                </>
-              )}
               <div className="input-group">
                 <label htmlFor="address">Address</label>
                 <input
