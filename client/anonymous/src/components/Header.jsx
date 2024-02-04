@@ -57,7 +57,7 @@ function Header() {
                 style={{ border: "1px solid blue" }}
               >
                 <a
-                  href="/register"
+                  href="/signup-role"
                   style={{ textDecoration: "none", color: "inherit" }}
                 >
                   Sign Up
