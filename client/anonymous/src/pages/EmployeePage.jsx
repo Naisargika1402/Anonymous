@@ -29,9 +29,9 @@ function EmployeePage() {
     <>
       <WorkerHeader />
       <div className="container mt-5" style={{ maxWidth: "700px" }}>
-        <div className="card text-center mb-4">
+        <div className="card mb-4">
           <div className="card-body">
-            <h2 className="card-title">
+            <h2 className="card-title text-center">
               Hey {firstName}, here are your details:
             </h2>
             <hr />
@@ -61,12 +61,14 @@ function EmployeePage() {
                 {workerDetails.gender}
               </li>
               <li className="list-group-item">
-                <span style={{ color: "#F28500" }}>Designation:</span>{" "}
-                {workerDetails.designation}
-              </li>
-              <li className="list-group-item">
                 <span style={{ color: "#F28500" }}>Expertise:</span>{" "}
                 {workerDetails.expertise}
+              </li>
+              <li className="list-group-item">
+                <span style={{ color: "#F28500" }}>Skills:</span>{" "}
+                {workerDetails.skills && workerDetails.skills.length > 0
+                  ? workerDetails.skills.join(", ")
+                  : "No skills specified"}
               </li>
               <li className="list-group-item">
                 <span style={{ color: "#F28500" }}>Experience:</span>{" "}
