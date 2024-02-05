@@ -7,7 +7,6 @@ import "../css files/Services.css";
 import HomeServices from "../components/HomeServices";
 
 function Services() {
-
   const animationOptions = {
     loop: true,
     autoplay: true,
@@ -21,7 +20,6 @@ function Services() {
     animationData: Animation1,
   };
 
-
   return (
     <div>
       <Header />
@@ -29,14 +27,27 @@ function Services() {
         <div class="container">
           <div class="row ht">
             <div class="col-md-6">
-              <div class="img-box"><Lottie options={animationOptions1}/></div>
+              <div class="img-box">
+                <Lottie options={animationOptions1} />
+              </div>
             </div>
             <div class="col-md-6">
               <div class="detail-box">
-                <h2>We Provide Professional<br/>
-                  Home Services.</h2>
-                <p>randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All randomised words which don't look even slightly</p>
-              <a>Try Them</a></div>
+                <h2>
+                  We Provide Professional
+                  <br />
+                  Home Services.
+                </h2>
+                <p>
+                  Anonymous - Your Virtual Concierge, is more than just a
+                  service platform; it's a commitment to making your life
+                  easier, more efficient, and more enjoyable. Join us on this
+                  journey towards seamless convenience, where your needs are met
+                  with excellence. Thank you for choosing Anonymous, where
+                  service meets simplicity.
+                </p>
+                {/*<a>Try Them</a>*/}
+              </div>
             </div>
           </div>
         </div>
