@@ -1,7 +1,7 @@
 import React from "react";
 
 function Cleaning() {
-  return <div></div>;
+  return <div>Hello</div>;
 }
 
 export default Cleaning;

@@ -12,6 +12,12 @@ import Testimonials from "./pages/Testimonials";
 import "./index.css";
 import UserPage from "./pages/UserPage";
 import UserProfile from "./pages/UserProfile";
+import Maintenance from "./services/Maintenance";
+import Electrical from "./services/Electrical";
+import Grooming from "./services/Grooming";
+import Plumbing from "./services/Plumbing";
+import Cleaning from "./services/Cleaning";
+import FoodServices from "./services/FoodServices";
 
 function App() {
   return (
@@ -29,6 +35,12 @@ function App() {
           <Route path="/userpage" element={<UserPage />} />
           <Route path="/employeepage" element={<EmployeePage />} />
           <Route path="/getUserDetails" element={<UserProfile />} />
+          <Route path="/maintenance" element={<Maintenance />} />
+          <Route path="/electrical" element={<Electrical />} />
+          <Route path="/grooming" element={<Grooming />} />
+          <Route path="/plumbing" element={<Plumbing />} />
+          <Route path="/food" element={<FoodServices />} />
+          <Route path="/cleaning" element={<Cleaning />} />
         </Routes>
       </BrowserRouter>
     </Container>

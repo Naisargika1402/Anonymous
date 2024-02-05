@@ -1,7 +1,7 @@
 import React from "react";
 
 function Grooming() {
-  return <div></div>;
+  return <div>Hello</div>;
 }
 
 export default Grooming;
