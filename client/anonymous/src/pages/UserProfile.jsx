@@ -152,9 +152,9 @@ function UserProfile() {
     <>
       <UserHeader searchInput={searchInput} findMyLocation={findMyLocation} />
       <div className="container mt-5" style={{ maxWidth: "700px" }}>
-        <div className="card text-center mb-4">
+        <div className="card mb-4">
           <div className="card-body">
-            <h2 className="card-title">Hello, {firstName}</h2>
+            <h2 className="card-title text-center">Hello, {firstName}</h2>
             <hr />
             <ul className="list-group list-group-flush">
               <li className="list-group-item">
