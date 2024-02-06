@@ -52,4 +52,111 @@ router.post("/getUserDetails", (req, res) => {
     });
 });
 
+router.post("/maintenance", (req, res) => {
+  const { designation, expertise } = req.body;
+  userModel
+    .findOne({ designation, expertise })
+    .select("-password -confirmPassword") // exclude password and confirmPassword
+    .then((user) => {
+      if (user) {
+        res.json(user);
+      } else {
+        res.json("User not found");
+      }
+    })
+    .catch((err) => {
+      console.error(err);
+      res.status(500).json("Internal Server Error");
+    });
+});
+
+router.post("/cleaning", (req, res) => {
+  const { designation, expertise } = req.body;
+  userModel
+    .findOne({ designation, expertise })
+    .select("-password -confirmPassword") // exclude password and confirmPassword
+    .then((user) => {
+      if (user) {
+        res.json(user);
+      } else {
+        res.json("User not found");
+      }
+    })
+    .catch((err) => {
+      console.error(err);
+      res.status(500).json("Internal Server Error");
+    });
+});
+
+router.post("/electrical", (req, res) => {
+  const { designation, expertise } = req.body;
+  userModel
+    .findOne({ designation, expertise })
+    .select("-password -confirmPassword") // exclude password and confirmPassword
+    .then((user) => {
+      if (user) {
+        res.json(user);
+      } else {
+        res.json("User not found");
+      }
+    })
+    .catch((err) => {
+      console.error(err);
+      res.status(500).json("Internal Server Error");
+    });
+});
+
+router.post("/food", (req, res) => {
+  const { designation, expertise } = req.body;
+  userModel
+    .findOne({ designation, expertise })
+    .select("-password -confirmPassword") // exclude password and confirmPassword
+    .then((user) => {
+      if (user) {
+        res.json(user);
+      } else {
+        res.json("User not found");
+      }
+    })
+    .catch((err) => {
+      console.error(err);
+      res.status(500).json("Internal Server Error");
+    });
+});
+
+router.post("/grooming", (req, res) => {
+  const { designation, expertise } = req.body;
+  userModel
+    .findOne({ designation, expertise })
+    .select("-password -confirmPassword") // exclude password and confirmPassword
+    .then((user) => {
+      if (user) {
+        res.json(user);
+      } else {
+        res.json("User not found");
+      }
+    })
+    .catch((err) => {
+      console.error(err);
+      res.status(500).json("Internal Server Error");
+    });
+});
+
+router.post("/plumbing", (req, res) => {
+  const { designation, expertise } = req.body;
+  userModel
+    .findOne({ designation, expertise })
+    .select("-password -confirmPassword") // exclude password and confirmPassword
+    .then((user) => {
+      if (user) {
+        res.json(user);
+      } else {
+        res.json("User not found");
+      }
+    })
+    .catch((err) => {
+      console.error(err);
+      res.status(500).json("Internal Server Error");
+    });
+});
 module.exports = router;
