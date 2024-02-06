@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-function FoodServices() {
+function Plumbing() {
   const [userData, setUserData] = useState(null);
 
   useEffect(() => {
     // Fetch user details
     axios
-      .post("/getUserDetails", {
+      .post("http://localhost:4000/plumbing", {
         designation: "Employee",
         expertise: "Plumbing",
       })
@@ -43,4 +43,4 @@ function FoodServices() {
   );
 }
 
-export default FoodServices;
+export default Plumbing;

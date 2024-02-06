@@ -7,7 +7,7 @@ function FoodServices() {
   useEffect(() => {
     // Fetch user details
     axios
-      .post("/getUserDetails", {
+      .post("http://localhost:4000/food", {
         designation: "Employee",
         expertise: "Food Services",
       })
