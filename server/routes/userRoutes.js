@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const userModel = require("../models/users");
 
+// Route for user login
 router.post("/login", (req, res) => {
   const { email, password } = req.body;
   userModel.findOne({ email: email }).then((user) => {
@@ -17,6 +18,7 @@ router.post("/login", (req, res) => {
   });
 });
 
+// Route for user signup
 router.post("/signup-user", (req, res) => {
   console.log(req.body);
   userModel
@@ -25,6 +27,7 @@ router.post("/signup-user", (req, res) => {
     .catch((err) => res.json(err));
 });
 
+// Route for employee signup
 router.post("/signup-employee", (req, res) => {
   console.log(req.body);
   userModel
@@ -33,7 +36,7 @@ router.post("/signup-employee", (req, res) => {
     .catch((err) => res.json(err));
 });
 
-// Add a new route to fetch user details by email
+// Route to fetch user details by email
 router.post("/getUserDetails", (req, res) => {
   const { email } = req.body;
   userModel
@@ -52,111 +55,34 @@ router.post("/getUserDetails", (req, res) => {
     });
 });
 
-router.post("/maintenance", (req, res) => {
-  const { designation, expertise } = req.body;
-  userModel
-    .findOne({ designation, expertise })
-    .select("-password -confirmPassword") // exclude password and confirmPassword
-    .then((user) => {
-      if (user) {
-        res.json(user);
-      } else {
-        res.json("User not found");
-      }
-    })
-    .catch((err) => {
-      console.error(err);
-      res.status(500).json("Internal Server Error");
-    });
+// Define routes for different services dynamically
+const services = [
+  "maintenance",
+  "cleaning",
+  "electrical",
+  "food",
+  "grooming",
+  "plumbing",
+];
+
+services.forEach((service) => {
+  router.post(`/${service}`, (req, res) => {
+    const { designation, expertise } = req.body;
+    userModel
+      .findOne({ designation, expertise })
+      .select("-password -confirmPassword") // exclude password and confirmPassword
+      .then((user) => {
+        if (user) {
+          res.json(user);
+        } else {
+          res.json("User not found");
+        }
+      })
+      .catch((err) => {
+        console.error(err);
+        res.status(500).json("Internal Server Error");
+      });
+  });
 });
 
-router.post("/cleaning", (req, res) => {
-  const { designation, expertise } = req.body;
-  userModel
-    .findOne({ designation, expertise })
-    .select("-password -confirmPassword") // exclude password and confirmPassword
-    .then((user) => {
-      if (user) {
-        res.json(user);
-      } else {
-        res.json("User not found");
-      }
-    })
-    .catch((err) => {
-      console.error(err);
-      res.status(500).json("Internal Server Error");
-    });
-});
-
-router.post("/electrical", (req, res) => {
-  const { designation, expertise } = req.body;
-  userModel
-    .findOne({ designation, expertise })
-    .select("-password -confirmPassword") // exclude password and confirmPassword
-    .then((user) => {
-      if (user) {
-        res.json(user);
-      } else {
-        res.json("User not found");
-      }
-    })
-    .catch((err) => {
-      console.error(err);
-      res.status(500).json("Internal Server Error");
-    });
-});
-
-router.post("/food", (req, res) => {
-  const { designation, expertise } = req.body;
-  userModel
-    .findOne({ designation, expertise })
-    .select("-password -confirmPassword") // exclude password and confirmPassword
-    .then((user) => {
-      if (user) {
-        res.json(user);
-      } else {
-        res.json("User not found");
-      }
-    })
-    .catch((err) => {
-      console.error(err);
-      res.status(500).json("Internal Server Error");
-    });
-});
-
-router.post("/grooming", (req, res) => {
-  const { designation, expertise } = req.body;
-  userModel
-    .findOne({ designation, expertise })
-    .select("-password -confirmPassword") // exclude password and confirmPassword
-    .then((user) => {
-      if (user) {
-        res.json(user);
-      } else {
-        res.json("User not found");
-      }
-    })
-    .catch((err) => {
-      console.error(err);
-      res.status(500).json("Internal Server Error");
-    });
-});
-
-router.post("/plumbing", (req, res) => {
-  const { designation, expertise } = req.body;
-  userModel
-    .findOne({ designation, expertise })
-    .select("-password -confirmPassword") // exclude password and confirmPassword
-    .then((user) => {
-      if (user) {
-        res.json(user);
-      } else {
-        res.json("User not found");
-      }
-    })
-    .catch((err) => {
-      console.error(err);
-      res.status(500).json("Internal Server Error");
-    });
-});
 module.exports = router;
