@@ -117,7 +117,7 @@ const HomeServices = () => {
                 <img src={s6} alt="Grooming Service" />
               </div>
               <div className="detail-box">
-                <Link to="/electrical" style={{ textDecoration: "none" }}>
+                <Link to="/grooming" style={{ textDecoration: "none" }}>
                   <h5>Grooming</h5>
                   <p>
                     Indulge in our grooming services designed to enhance your
