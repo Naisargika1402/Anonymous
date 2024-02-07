@@ -69,13 +69,13 @@ services.forEach((service) => {
   router.post(`/${service}`, (req, res) => {
     const { designation, expertise } = req.body;
     userModel
-      .findOne({ designation, expertise })
+      .findOne({ designation, expertise }) // Use .find() to retrieve all entries
       .select("-password -confirmPassword") // exclude password and confirmPassword
-      .then((user) => {
-        if (user) {
-          res.json(user);
+      .then((users) => {
+        if (users && users.length > 0) {
+          res.json(users);
         } else {
-          res.json("User not found");
+          res.json("No users found");
         }
       })
       .catch((err) => {
