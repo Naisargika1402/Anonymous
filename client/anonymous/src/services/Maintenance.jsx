@@ -27,7 +27,7 @@ function Maintenance() {
     <div>
       {userData.length > 0 ? (
         <div>
-          <h2>User Details</h2>
+          <h2>Employees Available</h2>
           {userData.map((user, index) => (
             <div key={index}>
               <p>Name: {user.name}</p>

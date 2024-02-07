@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 function Grooming() {
-  const [userData, setUserData] = useState(null);
+  const [userData, setUserData] = useState([]);
 
   useEffect(() => {
     // Fetch user details
@@ -12,10 +12,10 @@ function Grooming() {
         expertise: "Grooming",
       })
       .then((response) => {
-        if (response.data !== "User not found") {
+        if (response.data !== "No users found") {
           setUserData(response.data);
         } else {
-          console.log("User not found");
+          console.log("No users found");
         }
       })
       .catch((error) => {
@@ -25,16 +25,26 @@ function Grooming() {
 
   return (
     <div>
-      {userData ? (
+      {userData.length > 0 ? (
         <div>
-          <h2>User Details</h2>
-          <p>Name: {userData.name}</p>
-          <p>Email: {userData.email}</p>
-          <p>Phone Number: {userData.phoneNumber}</p>
-          <p>Age: {userData.age}</p>
-          <p>Gender: {userData.gender}</p>
-          <p>Skills: {userData.skills.join(", ")}</p>
-          <p>Address: {userData.address}</p>
+          <h2>Employees Available</h2>
+          {userData.map((user, index) => (
+            <div key={index}>
+              <p>Name: {user.name}</p>
+              <p>Email: {user.email}</p>
+              <p>Phone Number: {user.phoneNumber}</p>
+              <p>Age: {user.age}</p>
+              <p>Gender: {user.gender}</p>
+              <p>
+                Skills:{" "}
+                {Array.isArray(user.skills)
+                  ? user.skills.join(", ")
+                  : user.skills}
+              </p>
+              <p>Address: {user.address}</p>
+              <hr />
+            </div>
+          ))}
         </div>
       ) : (
         <p>Loading...</p>
